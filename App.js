@@ -1,7 +1,7 @@
-import { StyleSheet, Text, View, ScrollView } from 'react-native';
+import {StyleSheet, Text, View, ScrollView} from 'react-native';
 
 export default function App() {
-    return <Display />;
+    return <Display/>;
 }
 
 function Display() {
@@ -10,12 +10,12 @@ function Display() {
             {/* Exercise 1 */}
             <View style={styles.section}>
                 <Text style={styles.sectionTitle}>Exercise 1</Text>
-                <Text style={{ fontSize: 24 }}>Values</Text>
-                <Text style={{ color: 'green' }}>Excellence</Text>
-                <Text style={{ backgroundColor: 'yellow' }}>Customer-Centric</Text>
-                <Text style={{ fontStyle: 'italic' }}>Integrity</Text>
-                <Text style={{ textAlign: 'center' }}>Teamwork</Text>
-                <Text style={{ color: 'white', backgroundColor: 'black' }}>Enterprising</Text>
+                <Text style={{fontSize: 24}}>Values</Text>
+                <Text style={{color: 'green'}}>Excellence</Text>
+                <Text style={{backgroundColor: 'yellow'}}>Customer-Centric</Text>
+                <Text style={{fontStyle: 'italic'}}>Integrity</Text>
+                <Text style={{textAlign: 'center'}}>Teamwork</Text>
+                <Text style={{color: 'white', backgroundColor: 'black'}}>Enterprising</Text>
             </View>
 
             {/* Exercise 2 */}
@@ -50,9 +50,9 @@ function Display() {
             <View style={styles.section}>
                 <Text style={styles.sectionTitle}>Exercise 3C</Text>
                 <View style={styles.Parent3}>
-                    <Text style={[styles.Child3, { width: 90 }]}>Child One</Text>
+                    <Text style={[styles.Child3, {width: 90}]}>Child One</Text>
                     <Text style={styles.Child3}>Child Two</Text>
-                    <Text style={[styles.Child3, { maxHeight: 25 }]}>Child Three</Text>
+                    <Text style={[styles.Child3, {maxHeight: 25}]}>Child Three</Text>
                 </View>
             </View>
 
@@ -60,9 +60,35 @@ function Display() {
             <View style={styles.section}>
                 <Text style={styles.sectionTitle}>Exercise 3D</Text>
                 <View style={styles.Parent}>
-                    <Text style={[styles.Child, { flex: 1/6 }]}>Child One</Text>
-                    <Text style={[styles.Child, {flex: 2/6 }]}>Child Two</Text>
-                    <Text style={[styles.Child, { flex: 3/6 }]}>Child Three</Text>
+                    <Text style={[styles.Child, {flex: 1}]}>Child One</Text>
+                    <Text style={[styles.Child, {flex: 2}]}>Child Two</Text>
+                    <Text style={[styles.Child, {flex: 3}]}>Child Three</Text>
+                </View>
+            </View>
+
+            {/*Exercise 3E*/}
+            <View style={styles.section}>
+                <Text style={styles.sectionTitle}>Exercise 3E</Text>
+                <View style={styles.Parent4}>
+                    <Text style={styles.Child4}>Child One</Text>
+                    <Text style={styles.Child4}>Child Two</Text>
+                    <Text style={styles.Child4}>Child Three</Text>
+                </View>
+            </View>
+
+            {/*Exercise 4*/}
+            <View style={styles.section}>
+                <Text style={styles.sectionTitle}>Exercise 4</Text>
+                <View style={styles.Parent5}>
+                    <View style={[styles.Child5, {backgroundColor: 'red'}]}>
+                        <Text>Square 1</Text>
+                    </View>
+                    <View style={[styles.Child5, {backgroundColor: 'green'}]}>
+                        <Text>Square 2</Text>
+                    </View>
+                    <View style={[styles.Child5, {backgroundColor: 'blue'}]}>
+                        <Text>Square 3</Text>
+                    </View>
                 </View>
             </View>
         </ScrollView>
@@ -142,4 +168,36 @@ const styles = StyleSheet.create({
         fontSize: 24,
         flex: 1,
     },
+    Parent4: {
+        flexDirection: 'column',
+        backgroundColor: '#F5fcff',
+        borderColor: '#0099AA',
+        borderWidth: 5,
+        flex: 1,
+        // justifyContent: 'flex-end',
+        // justifyContent: 'flex-start',
+        // justifyContent: 'space-between',
+        justifyContent: 'space-evenly',
+    },
+    Child4: {
+        borderWidth: 2,
+        textAlign: 'center',
+        fontSize: 24,
+        flex: 1,
+    },
+    Child5: {
+        width: 80,
+        height: 80,
+        justifyContent: 'center',
+        alignItems: 'center',
+        margin: 10,
+    },
+    Parent5: {
+        backgroundColor: 'whitesmoke',
+        marginTop: 30,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+
 });
